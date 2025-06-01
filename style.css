@@ -1,0 +1,251 @@
+@font-face {
+    font-family: "farzi";
+    src: url("./font/Figtree-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'farzi', 'Segoe UI', sans-serif;
+    color: white;
+}
+
+body {
+    background: #000;
+}
+
+.header_section {
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 0.5px solid rgb(122, 122, 122);
+    position: relative;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+
+header ul a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+nav,
+ul {
+    width: initial;
+}
+
+.navbar {
+    transition: all ease 0.4s;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 80vh;
+    width: 80%;
+    opacity: 0;
+    left: 10%;
+    top: 120%;
+    color: white;
+    background: rgba(71, 71, 71, 0.788);
+    backdrop-filter: white;
+    border-radius: 20px;
+    z-index: 999;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    height: 100%;
+    list-style: none;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 150%;
+}
+
+
+header .closeBtn {
+    display: none;
+}
+
+.container {
+    height: 100vh;
+    background: #000;
+    padding: 100px;
+    position: relative;
+}
+
+.box {
+    z-index: 1;
+    height: 300px;
+    border-radius: 50%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #742ec4, transparent 40% 60%, #742ec4);
+    animation: rotation linear infinite 4s;
+    filter: blur(10px);
+    position: absolute;
+}
+
+.innerBox {
+    height: 220px;
+    border-radius: 50%;
+    width: 220px;
+    box-shadow: 2px 2px 20px linear-gradient(#742ec4, black),
+        inset linear-gradient(black, #742ec4);
+    background: repeating-linear-gradient(#742ec4, transparent 40% 60%, #742ec4);
+    animation: rotation-reverse linear infinite 4s;
+    filter: blur(5px) opacity(.8);
+}
+.hero_section {
+    position: relative;
+    /* top: 100px; */
+    height: 60vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.animation_section{
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero_content_section{
+    z-index: 20;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+.hero_content_section h1{
+    font-size: 50px;
+    align-self: self-start;
+}
+.hero_content_section p{
+    font-size: 20px;
+    align-self: self-start;
+}
+.hero_content_section button{
+    height: 40px;
+    width: 120px;
+    font-size: 14px;
+    background-color: #814AC8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    align-self: self-start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotation-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 0;
+    }
+
+    header .nav_1 {
+        display: none;
+    }
+
+    header .closeBtn {
+        display: block;
+    }
+    .hero_section .box{
+        height: 200px;
+        width: 200px;
+    }
+    .box .innerBox{
+        height: 150px;
+        width: 150px;
+    }
+    .hero_section {
+        top:100px;
+        flex-direction: column;
+        padding: 40px;
+    }
+    .hero_section .animation_section .box{
+        top: 25%;
+    }
+    .hero_section h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width:500px) {
+    .header_section .navbar {
+        display: none;
+    }
+}

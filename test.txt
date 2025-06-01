@@ -1,0 +1,55 @@
+<div class="box">
+            <div class="innerBox">
+                
+            </div>
+        </div>
+
+        *{
+        margin: 0;padding: 0;box-sizing: border-box;
+    }
+    .container{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        background: #000;
+    }
+    .box{
+        height: 300px;
+        border-radius: 50%;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px 2px 20px linear-gradient(#742ec4 ,#000 ,#c491ff);
+        background: linear-gradient(to right,#742ec4 ,transparent 30% 70%,#742ec4);
+        animation: rotation linear infinite 4s;
+        filter: blur(5px);
+    }
+    .innerBox{
+        height: 220px;
+        border-radius: 50%;
+        width: 220px;
+        box-shadow: 2px 2px 20px linear-gradient(#742ec4 ,black),
+        inset linear-gradient(black,#742ec4);
+        background:repeating-linear-gradient(#742ec4,transparent 30% 70%,#742ec4);
+        animation: rotation-reverse linear infinite 4s;
+        filter: blur(5px) opacity(.8);
+    }
+    @keyframes rotation {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(-360deg);
+        }
+    }
+    @keyframes rotation-reverse {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(720deg);
+        }
+    }
