@@ -7,8 +7,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'farzi', 'Segoe UI', sans-serif;
+    font-family: 'farzi' !important;
     color: white;
+    transition: all ease 0.5s;
 }
 
 body {
@@ -175,14 +176,58 @@ header .closeBtn {
     border-radius: 10px;
     align-self: self-start;
 }
+.page_1 {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: hidden;
+}
 
+.page_1 .text_center{
+    text-align: center;
+}
+.page_1 ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    list-style: none;
+    font-size: 30px;
+    position: relative;
+}
+.page_1 ul::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right,#000,transparent 50% 55%,#000);
+}
 
-
-
-
-
-
-
+.page_1 li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 2s;
+    gap:10px
+}
+.page_2 {
+    min-height: 80vh;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.page_2 .text_center{
+    text-align: center;
+    font-size: 50px;
+}
+.page_2 .text_center p{
+    text-align: center;
+    font-size: 18px;
+}
 
 
 
@@ -212,14 +257,27 @@ header .closeBtn {
 
 
 @media screen and (max-width: 500px) {
+    .page_2 .text_center h2{
+        font-size: 24px;
+    }
+    .page_2 .text_center p{
+        font-size: 16px;
+    }
+    .text_center br{
+        display: none;
+    }
+    .page_1{
+        margin-top: 150px;
+        gap: 20px;
+    }
     .container {
         padding: 0;
     }
-
+    
     header .nav_1 {
         display: none;
     }
-
+    
     header .closeBtn {
         display: block;
     }
@@ -246,6 +304,14 @@ header .closeBtn {
 
 @media screen and (min-width:500px) {
     .header_section .navbar {
+        display: none;
+    }
+}
+@media screen and (max-width: 940px) {
+    .page_2 .text_center h2{
+        font-size: 30px;
+    }
+    .text_center br{
         display: none;
     }
 }
