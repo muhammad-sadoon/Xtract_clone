@@ -36,8 +36,12 @@ header {
 }
 
 header .logo {
-    font-size: 24px;
+    font-size: 24px !important;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 header nav ul {
@@ -129,6 +133,7 @@ header .closeBtn {
     animation: rotation-reverse linear infinite 4s;
     filter: blur(5px) opacity(.8);
 }
+
 .hero_section {
     position: relative;
     /* top: 100px; */
@@ -137,15 +142,18 @@ header .closeBtn {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 70px;
 }
-.animation_section{
+
+.animation_section {
     z-index: 10;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.hero_content_section{
+
+.hero_content_section {
     z-index: 20;
     width: 100%;
     display: flex;
@@ -156,15 +164,18 @@ header .closeBtn {
     gap: 20px;
 
 }
-.hero_content_section h1{
+
+.hero_content_section h1 {
     font-size: 50px;
     align-self: self-start;
 }
-.hero_content_section p{
+
+.hero_content_section p {
     font-size: 20px;
     align-self: self-start;
 }
-.hero_content_section button{
+
+.hero_content_section button {
     height: 40px;
     width: 120px;
     font-size: 14px;
@@ -176,6 +187,7 @@ header .closeBtn {
     border-radius: 10px;
     align-self: self-start;
 }
+
 .page_1 {
     min-height: 20vh;
     display: flex;
@@ -184,33 +196,36 @@ header .closeBtn {
     overflow: hidden;
 }
 
-.page_1 .text_center{
+.page_1 .text_center {
     text-align: center;
 }
-.page_1 ul{
+
+.page_1 ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:20px;
+    gap: 20px;
     list-style: none;
     font-size: 30px;
     position: relative;
 }
-.page_1 ul::after{
+
+.page_1 ul::after {
     content: "";
     height: 100%;
     width: 100%;
     position: absolute;
-    background: linear-gradient(to right,#000,transparent 50% 55%,#000);
+    background: linear-gradient(to right, #000, transparent 50% 55%, #000);
 }
 
-.page_1 li{
+.page_1 li {
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all ease 2s;
-    gap:10px
+    gap: 10px
 }
+
 .page_2 {
     min-height: 80vh;
     display: flex;
@@ -220,20 +235,162 @@ header .closeBtn {
     padding-left: 40px;
     padding-right: 40px;
 }
-.page_2 .text_center{
+
+.page_2 .text_center {
     text-align: center;
     font-size: 50px;
 }
-.page_2 .text_center p{
+
+.page_2 .text_center p {
     text-align: center;
     font-size: 18px;
 }
 
+.page_2 .content_between {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    height: 100%;
+    width: 100%;
+}
 
+.left_content {
+    height: 400px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.left_content .boxborder {
+    height: 90%;
+    width: 90%;
+    border-radius: 20px;
+    background: #1d1c1c;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
 
+.left_content .boxborder .backGroundBox {
+    height: 80%;
+    width: 80%;
+    background-color: #000;
+    border-radius: 20px 20px 0px 0px;
+    position: relative;
+    border-top: 1px solid rgb(151, 151, 151, 0.5);
+    border-left: 1px solid rgb(151, 151, 151, 0.5);
+    border-right: 1px solid rgb(151, 151, 151, 0.5);
+    overflow: hidden;
+    padding: 20px 10px;
+}
 
+.left_content .boxborder .backGroundBox::after {
+    position: absolute;
+    top: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(transparent, #000000);
+}
 
+.left_content .backGroundBox .top_content {
+    height: 30px;
+    width: 95%;
+    border: 1px solid rgb(151, 151, 151, 0.5);
+    border-radius: 5px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: absolute;
+    top: 20px;
+    gap: 20px;
+}
+
+.top_content button {
+    background-color: transparent;
+    border: 1px solid rgb(151, 151, 151, 0.5);
+    height: 20px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.top_content span {
+    font-size: 70%;
+}
+
+.list_content {
+    position: relative;
+    top: 40px;
+    overflow: hidden;
+}
+
+.list_content ul li {
+    border: 1px solid rgb(151, 151, 151, 0.5);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    padding: 5px 20px;
+    margin-top: 5px;
+    transform: translateY(500px);
+    animation: moveUp linear infinite 10s;
+
+}
+
+.page_2 .right_content {
+    width: 50%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.right_content h2 {
+    font-size: 35px;
+}
+
+.heading_top {
+    border: 1px solid rgb(151, 151, 151, 0.5);
+    border-radius: 5px;
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    white-space: nowrap;
+    padding: 5px 10px;
+    background: transparent;
+}
+
+.assistant {
+    position: absolute;
+    bottom: 20px;
+    height: 30%;
+    width: 95%;
+}
+.assistant span{
+    display: inline-block;
+    border-right: 2px solid gray;
+    padding: 0px 10px;
+    overflow-x: hidden;
+    animation: cursor_moving steps(30) infinite 6s ;
+    width: 0;
+}
+@keyframes cursor_moving {
+    50%{
+        width: 180px;
+    }
+}
+@keyframes moveUp {
+    100% {
+        transform: translateY(-500px);
+    }
+}
 
 @keyframes rotation {
     0% {
@@ -257,47 +414,58 @@ header .closeBtn {
 
 
 @media screen and (max-width: 500px) {
-    .page_2 .text_center h2{
+    .page_2 .text_center h2 {
         font-size: 24px;
     }
-    .page_2 .text_center p{
+.list_content ul li{
+    font-size: 12px;
+}
+    .page_2 .text_center p {
         font-size: 16px;
     }
-    .text_center br{
+
+    .text_center br {
         display: none;
     }
-    .page_1{
+
+    .page_1 {
         margin-top: 150px;
         gap: 20px;
     }
+
     .container {
         padding: 0;
     }
-    
+
     header .nav_1 {
         display: none;
     }
-    
+
     header .closeBtn {
         display: block;
     }
-    .hero_section .box{
+
+    .hero_section .box {
         height: 200px;
         width: 200px;
     }
-    .box .innerBox{
+
+    .box .innerBox {
         height: 150px;
         width: 150px;
     }
+
     .hero_section {
-        top:100px;
+        top: 100px;
         flex-direction: column;
         padding: 40px;
     }
-    .hero_section .animation_section .box{
+
+    .hero_section .animation_section .box {
         top: 25%;
     }
-    .hero_section h1{
+
+    .hero_section h1 {
         font-size: 40px;
     }
 }
@@ -307,11 +475,33 @@ header .closeBtn {
         display: none;
     }
 }
-@media screen and (max-width: 940px) {
-    .page_2 .text_center h2{
+
+@media screen and (max-width: 1000px) {
+    .backGroundBox {
+        width: 90%;
+    }
+
+    .page_2 .text_center h2 {
         font-size: 30px;
     }
-    .text_center br{
+
+    .content_between {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left_content {
+        width: 100%;
+        min-width: 320px;
+    }
+
+    .right_content {
+        width: 100% !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text_center br {
         display: none;
     }
 }
