@@ -75,7 +75,7 @@ ul {
     left: 10%;
     top: 120%;
     color: white;
-    background: rgba(71, 71, 71, 0.788);
+    background: rgba(137, 136, 136, 0.934);
     backdrop-filter: white;
     border-radius: 20px;
     z-index: 999;
@@ -298,15 +298,14 @@ header .closeBtn {
 
 .left_content .backGroundBox .top_content {
     height: 30px;
-    width: 95%;
+    width: 100%;
     border: 1px solid rgb(151, 151, 151, 0.5);
     border-radius: 5px;
     padding: 4px 8px;
     display: flex;
     align-items: center;
     justify-content: start;
-    position: absolute;
-    top: 20px;
+    position: relative;
     gap: 20px;
 }
 
@@ -324,7 +323,7 @@ header .closeBtn {
 
 .list_content {
     position: relative;
-    top: 40px;
+    top: 5px;
     overflow: hidden;
 }
 
@@ -373,19 +372,244 @@ header .closeBtn {
     height: 30%;
     width: 95%;
 }
-.assistant span{
+
+.assistant span {
     display: inline-block;
     border-right: 2px solid gray;
     padding: 0px 10px;
     overflow-x: hidden;
-    animation: cursor_moving steps(30) infinite 6s ;
+    animation: cursor_moving steps(30) infinite 6s;
     width: 0;
 }
+
+.loader {
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    border-radius: 50%;
+    border-top: 2.5px solid #814AC8;
+    border-left: 2.5px solid #814AC8;
+    border-right: 2.5px solid #814AC8;
+    border-bottom: 2.5px solid transparent;
+    animation: loader linear infinite 2s;
+}
+
+.email_content {
+    background-image: url("./img/email_content.png");
+    height: 80px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-size: 95% 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(122, 122, 122);
+}
+
+.sending_email_status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(122, 122, 122);
+}
+
+.sending_email_status .email_status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    height: 40%;
+    width: 100%;
+}
+
+.sending_email_status .email_status span {
+    position: relative;
+}
+
+.sending_email_status .email_status span::after {
+    position: absolute;
+    top: 110%;
+    background-color: red;
+    height: 10px;
+    content: "";
+    left: 50%;
+    width: 10px;
+    background-color: #742ec4;
+    border-radius: 50%;
+}
+
+.sending_email_status .email_status span:nth-child(1)::after {
+    left: 0%;
+}
+
+.sending_email_status .email_status span:nth-child(3)::after {
+    left: 80%;
+}
+
+.sending_email_status .animation_email {
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #814AC8 0%, black 0%);
+    animation: moving_animation infinite linear 6s;
+}
+
+.steps_boxes {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.flex-between {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.steps_boxes .step_box {
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    border: 1px solid rgb(122, 122, 122);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.steps_boxes .step_box .box_1 {
+    height: 100%;
+    min-width: 50%;
+    border-radius: 5px;
+    border: 1px solid rgb(122, 122, 122);
+}
+
+.steps_boxes .step_box .box_1 .scanner_animation {
+    min-height: 50px;
+    min-width: 50px;
+    height: 100%;
+    width: 100%;
+}
+
+.steps_boxes .step_box .box_1 .scanner_animation span {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: inline-block;
+    background: conic-gradient(#814AC8 10deg, transparent 80deg);
+    border: 1px solid rgb(122, 122, 122);
+    animation: rotate infinite linear 3s;
+}
+
+
+.steps_boxes .step_box .box_2 {
+    width: 50%;
+    min-height: 150px;
+    min-width: 150px;
+    border-radius: 5px;
+    border: 1px solid rgb(122, 122, 122);
+}
+
+.steps_boxes .step_box .box_2 ul {
+    white-space: nowrap;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+    align-self: flex-start;
+    width: 100%;
+    overflow: hidden;
+}
+
+.steps_boxes .step_box .box_2 ul li {
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(122, 122, 122);
+}
+
+.step_box_2 .code_box {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(122, 122, 122);
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.step_box_2 .code_box::after {
+    position: absolute;
+    top: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(transparent, #000000);
+}
+
+.step_box_2 .code_box .code_content {
+    animation: moveUpCode linear infinite 10s;
+    transform: translateY(200px);
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes moveUpCode {
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+@keyframes moving_animation {
+    0% {
+        background: linear-gradient(to right, #814AC8 0%, black 0%);
+    }
+
+    50% {
+        background: linear-gradient(to right, #814AC8 50%, black 50%);
+    }
+
+    100% {
+        background: linear-gradient(to right, #814AC8 100%, black 100%);
+    }
+}
+
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes cursor_moving {
-    50%{
+    50% {
         width: 180px;
     }
 }
+
 @keyframes moveUp {
     100% {
         transform: translateY(-500px);
@@ -414,12 +638,25 @@ header .closeBtn {
 
 
 @media screen and (max-width: 500px) {
+    .steps_boxes .step_box .box_1 .scanner_animation span{
+        height: 80px;
+        width: 80px;
+    }
+    .steps_boxes .step_box .box_1 {
+        width: 100%;
+    }
+    .steps_boxes .step_box .box_2 {
+        width: 100%;
+        height: 200%;
+    }
     .page_2 .text_center h2 {
         font-size: 24px;
     }
-.list_content ul li{
-    font-size: 12px;
-}
+
+    .list_content ul li {
+        font-size: 12px;
+    }
+
     .page_2 .text_center p {
         font-size: 16px;
     }
@@ -477,6 +714,19 @@ header .closeBtn {
 }
 
 @media screen and (max-width: 1000px) {
+    .step_box_1 .flex-between{
+        flex-direction: column;
+    }
+    .steps_boxes {
+        flex-direction: column;
+    }
+    .steps_boxes .step_box_1{
+        width: 100%;
+        height: 150%;
+    }
+    .steps_boxes .step_box_2{
+        width: 100%;
+    }
     .backGroundBox {
         width: 90%;
     }
