@@ -5,10 +5,10 @@ let navbar = document.querySelector(".navbar");
 flage = true
 closeBtn.addEventListener("click", () => {
     if (flage) {
-        navbar.style.opacity = 1;
+        navbar.style.display = "block";
         flage = false
     } else {
-        navbar.style.opacity = 0;
+        navbar.style.display = "none";
         flage = true
     }
 })
