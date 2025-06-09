@@ -103,7 +103,6 @@ header .closeBtn {
 }
 
 .container {
-    height: 100vh;
     background: #000;
     padding: 100px;
     position: relative;
@@ -381,6 +380,22 @@ header .closeBtn {
     animation: cursor_moving steps(30) infinite 6s;
     width: 0;
 }
+.page_3{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.page_3 .text_center {
+    text-align: center;
+    font-size: 50px;
+}
+.page_3 .text_center p{
+    text-align: center;
+    font-size: 18px;
+}
 
 .loader {
     height: 15px;
@@ -460,11 +475,9 @@ header .closeBtn {
 }
 
 .steps_boxes {
-    height: 50vh;
     width: 100%;
     display: flex;
     gap: 20px;
-
 }
 
 .flex {
@@ -483,7 +496,6 @@ header .closeBtn {
 }
 
 .steps_boxes .step_box {
-    height: 100%;
     width: 50%;
     background-color: black;
     border: 1px solid rgb(122, 122, 122);
@@ -497,7 +509,10 @@ header .closeBtn {
 }
 
 .steps_boxes .step_box .box_1 {
-    height: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-width: 50%;
     border-radius: 5px;
     border: 1px solid rgb(122, 122, 122);
@@ -523,7 +538,7 @@ header .closeBtn {
 
 .steps_boxes .step_box .box_2 {
     width: 50%;
-    min-height: 150px;
+    min-height: 200px;
     min-width: 150px;
     border-radius: 5px;
     border: 1px solid rgb(122, 122, 122);
@@ -550,6 +565,7 @@ header .closeBtn {
 
 .step_box_2 .code_box {
     height: 100%;
+    max-height: 250px;
     width: 100%;
     border-radius: 10px;
     border: 1px solid rgb(122, 122, 122);
@@ -567,11 +583,110 @@ header .closeBtn {
     background: linear-gradient(transparent, #000000);
 }
 
+
 .step_box_2 .code_box .code_content {
     animation: moveUpCode linear infinite 10s;
-    transform: translateY(200px);
+    transform: translateY(300px);
+}
+.steamless_1{
+    height: 150px;
+    width: 30%;
+    border-radius: 10px;
+    border: 1px solid rgb(122, 122, 122);
+}
+.steamless_2{
+    height: 100px;
+    width: 33%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 0px;
+}
+.steamless_2 .range_box{
+    border: 0.5px solid rgba(122, 122, 122, 0.67);
+    width: 100%;
+    height: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.steamless_2 .range_box .inner_range{
+    width: 20px;
+    background-color: #814AC8;
+    box-shadow: 0px 0px 20px 20px #814AC8;
+    height: 100%;
+    position: absolute;
+    left: -50%;
+    animation: moveLeft linear infinite 2s;
 }
 
+.steamless_3{
+    height: 100px;
+    width: 30%;
+    border-radius: 10px;
+    border: 1px solid rgb(122, 122, 122);
+    overflow: hidden;
+}
+.steamless_3 .img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: moveUpImg 6s steps(3) infinite forwards;
+}
+
+.card{
+    padding: 100px 20px;
+    margin: auto;
+    width: 60%;
+    background: linear-gradient(30deg,#742ec4 10%,transparent 30% 70%,#814AC8 90%);
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+.card button{
+    height: 30px;
+    padding: 5px 15px;
+    background: #742ec4;
+    border-radius: 5px;
+    border: 0;
+}
+.footer{
+    background: linear-gradient(30deg,#742ec4 5%,transparent 30% 70%,#814AC8 95%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    gap: 20px;
+}
+.footer button{
+    height: 30px;
+    padding: 5px 15px;
+    background: #742ec4;
+    border-radius: 5px;
+    border: 0;
+}
+.footer .feedback{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+@keyframes moveUpImg {
+    100%{
+        transform: translateY(-300%);
+    }
+}
+@keyframes moveLeft {
+    100%{
+        left: 200%;
+    }
+}
 @keyframes rotate {
     100% {
         transform: rotate(-360deg);
@@ -580,7 +695,7 @@ header .closeBtn {
 
 @keyframes moveUpCode {
     100% {
-        transform: translateY(-300px);
+        transform: translateY(-440px);
     }
 }
 
@@ -638,9 +753,26 @@ header .closeBtn {
 
 
 @media screen and (max-width: 500px) {
+    .footer{
+        flex-direction: column;
+    }
+    .card{
+        margin-top: 30px;
+        width: 80%;
+    }
+    .steamless_1 .box {
+        height: 40px !important;
+        width: 40px !important;
+        filter: blur(0px) !important;
+    }
+    .steamless_1 .box .innerBox{
+        height: 20px !important;
+        width: 20px !important  ;
+        filter: blur(0px) !important;
+    }
     .steps_boxes .step_box .box_1 .scanner_animation span{
-        height: 80px;
-        width: 80px;
+        height: 140px;
+        width: 140px;
     }
     .steps_boxes .step_box .box_1 {
         width: 100%;
@@ -658,6 +790,9 @@ header .closeBtn {
     }
 
     .page_2 .text_center p {
+        font-size: 16px;
+    }
+    .page_3 .text_center p {
         font-size: 16px;
     }
 
@@ -714,6 +849,12 @@ header .closeBtn {
 }
 
 @media screen and (max-width: 1000px) {
+    .steamless_1 .box {
+        filter: blur(10px);
+    }
+    .steamless_1 .box .innerBox{
+        filter: blur(10px);
+    }
     .step_box_1 .flex-between{
         flex-direction: column;
     }
@@ -732,6 +873,9 @@ header .closeBtn {
     }
 
     .page_2 .text_center h2 {
+        font-size: 30px;
+    }
+    .page_3 .text_center h2 {
         font-size: 30px;
     }
 

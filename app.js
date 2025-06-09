@@ -1,4 +1,5 @@
 AOS.init();
+AOS.once = true;
 let closeBtn = document.querySelector(".closeBtn");
 let navbar = document.querySelector(".navbar");
 flage = true
